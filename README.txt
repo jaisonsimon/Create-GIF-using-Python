@@ -5,13 +5,13 @@ The "v3" in the import statement means you're using version 3 of the imageio lib
 
 Now, run the code to make sure it works. Hopefully there's no error!
 Here are two images that you can use for this project(Its in the repository):
-team-pic1.png
-team-pic2.png
+pic1.png
+pic2.png
 Note: Make sure to store the image files in the same folder as your Python program file. 💡
 
 In our Python program, we'll create a list that contains the locations of the image files. We also need to create an empty list that will be used to store the actual image data from these files.
 
-filenames = ['team-pic1.png', 'team-pic2.png']
+filenames = ['pic1.png', 'pic2.png']
 images = [ ]
 
 Next, let’s use a for loop to go through the file paths and read the images using imageio library’s .imread() method:
@@ -22,11 +22,11 @@ The .imread() method loads an image based on the file path. So now, our images v
 
 Lastly, let’s use the .imwrite() method to turn the images into a GIF:
 
-iio.imwrite('team.gif', images, duration = 500, loop = 0)
+iio.imwrite('pic.gif', images, duration = 500, loop = 0)
 
 This takes in four arguments:
 
-'team.gif': This is the name you want to give to your new GIF file.
+'pic.gif': This is the name you want to give to your new GIF file.
 images: The list containing the image data.
 duration = 500: How long each picture should show in the GIF, in milliseconds.
 loop = 0: How many times the GIF should repeat (0 means it keeps looping forever).
@@ -44,4 +44,4 @@ python3 create_gif.py
 
 If you are in VS Code, you can run the program by clicking the play button ▶️ (might need to also "Select Interpreter" to run the correct version of Python).
 
-A new team.gif should appear in the same folder.
+A new pic.gif should appear in the same folder.
